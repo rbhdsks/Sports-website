@@ -29,32 +29,19 @@
 
 ## Introduction
 
-This is a full-stack booking application developed for a sports technology company's operations team. The application allows center managers to view and create bookings for various sports facilities. The project is developed as per the requirements provided, focusing on core functionality with a simple and intuitive user interface.
-
----
+This is a full-stack booking application developed for a sports technology company's operations team. The application allows center managers to view and create bookings for various sports facilities, ensuring there are no double bookings for the same court and time slot.
 
 ## Project Overview
 
-The application consists of:
-
-- **Backend**: A RESTful API built with Node.js and Express, using MongoDB as the database.
-- **Frontend**: A React application that interacts with the backend APIs.
-- **Features**:
-  - Centers can manage multiple sports and resources.
-  - View bookings for a specific center, sport, and date.
-  - Create new bookings while preventing double bookings.
-  - Simple UI for operations team to manage bookings.
+The app handles multiple centers, multiple sports at each center, and multiple courts or resources for each sport. Center managers can view bookings and create new ones for any sport at their facility.
 
 ---
 
 ## Prerequisites
 
-Before you begin, ensure you have the following installed on your system:
-
-- **Node.js** (v14 or later)
-- **npm** (Node Package Manager)
-- **MongoDB** (Local installation or access to MongoDB Atlas)
-- **Git** (for cloning the repository)
+- Node.js installed
+- MongoDB installed or a cloud database like MongoDB Atlas
+- Git (optional for version control)
 
 ---
 
@@ -62,8 +49,68 @@ Before you begin, ensure you have the following installed on your system:
 
 ### Backend Setup
 
-1. **Clone the Repository**
+1. Clone the repository and navigate to the backend directory:
 
    ```bash
-   git clone https://github.com/rbhdsks/Sports-website/
-   cd booking-app/backend
+   git clone <repo-link>
+   cd booking-app-backend
+
+Install the required dependencies:
+
+bash
+Copy code
+npm install
+Set up your MongoDB connection in the .env file:
+
+env
+Copy code
+MONGO_URI=your-mongodb-uri
+Run the backend server:
+
+bash
+Copy code
+npm start
+Frontend Setup
+Navigate to the frontend directory:
+
+bash
+Copy code
+cd ../booking-app-frontend
+Install the required dependencies:
+
+bash
+Copy code
+npm install
+Run the frontend development server:
+
+bash
+Copy code
+npm start
+Running the Application
+Running the Backend Server
+The backend server can be run using the following command in the booking-app-backend directory:
+
+bash
+Copy code
+npm start
+The server will run on http://localhost:5000 by default.
+
+Running the Frontend App
+The frontend app can be run using the following command in the booking-app-frontend directory:
+
+bash
+Copy code
+npm start
+The frontend app will run on http://localhost:3000 by default.
+
+Deployment
+Backend Deployment
+You can deploy the backend using services like Heroku, AWS, or DigitalOcean.
+
+Follow the respective platform's guide for deploying Node.js apps.
+
+Frontend Deployment
+You can deploy the frontend using services like Netlify or Vercel.
+
+Follow the respective platform's guide for deploying React apps.
+
